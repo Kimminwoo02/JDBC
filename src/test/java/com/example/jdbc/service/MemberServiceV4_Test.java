@@ -4,6 +4,7 @@ import com.example.jdbc.domain.Member;
 import com.example.jdbc.repository.MemberRepository;
 import com.example.jdbc.repository.MemberRepositoryV3;
 import com.example.jdbc.repository.MemberRepositoryV4_1;
+import com.example.jdbc.repository.MemberRepositoryV4_2;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
@@ -47,7 +48,8 @@ class MemberServiceV4_Test {
 
         @Bean
         MemberRepository memberRepository(){
-            return new MemberRepositoryV4_1(dataSource);
+            //return new MemberRepositoryV4_1(dataSource);
+            return new MemberRepositoryV4_2(dataSource);
         }
 
         @Bean
